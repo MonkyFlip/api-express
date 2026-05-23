@@ -1,2 +1,7 @@
-console.log("Hola Mundo");
-console.log("Bienvenido a mi API con Express");
+const express = require('express');
+
+const app = express();
+
+app.listen(3000, () => {
+    console.log('Hola Mundo');
+});
