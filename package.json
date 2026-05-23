@@ -1,14 +1,15 @@
 {
   "name": "api_express",
   "version": "1.0.0",
-  "description": "",
+  "description": "API desarrollada con EXPRESS para el richi",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "panchito": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Miguel Hernandez",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
