@@ -1,11 +1,13 @@
+import "dotenv/config";
+
 import express from "express";
-import dotenv from "dotenv";
 import userRoutes from './routes/user.js';
+import { connectMongo } from './db/mongo_conection.js';
 
 const app = express();
-dotenv.config();
+app.use(express.json());
 
-app.use(express.json())
+connectMongo();
 
 app.get("/", (req, res) => {
   res.send("hola mundo");
@@ -19,4 +21,4 @@ app.listen(PORT, () => {
   console.log(`escucha desde el puerto ${PORT}`);
 });
 
-console.log(express);
+//console.log(express);
