@@ -1,19 +1,21 @@
 import swaggerJSDoc from "swagger-jsdoc";
+
 const options = {
-    definition: {
-        openapi:'3.0.0',
-        info: {
-            title: 'API 94',
-            version: '1.0.0',
-            description: 'API CON EXPRESS'
-        }, 
-        servers: [
-            {
-                url: 'http://localhost:4000'
-            }
-        ]
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "API 94",
+      version: "1.0.0",
+      description: "API CON EXPRESS",
     },
-    apis: ['./routes/*.js']
+  },
+  servers: [
+    {
+      url: "http://localhost:5001",
+    },
+  ],
+  apis: ["./routes/*.js"],
 };
+
 const swaggerSpec = swaggerJSDoc(options);
 export default swaggerSpec;
