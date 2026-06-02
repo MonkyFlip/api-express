@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
-const connectMongo = async () => {
+export const connectMongo = async () => {
     try{
         await mongoose.connect(process.env.MONGO_URI, {
-            dbName: process.env.DB_NAME || 'api_express',
+            dbName: process.env.DB_NAME || 'api-express',
         });
         console.log('Conexion exitosa');
     } catch(error){
