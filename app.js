@@ -7,6 +7,7 @@ import swaggerUi from 'swagger-ui-express';
 
 import userRoutes from './routes/user.js';
 import swaggerSpec from "./config/swagger.js";
+import { connectMongo } from "./db/mongo_conection.js";
 
 
 const app = express();
@@ -17,6 +18,8 @@ app.use('/api/docs',
     swaggerUi.serve,
     swaggerUi.setup(swaggerSpec)
 )
+
+connectMongo();
 
 app.get("/", (req, res) => {
   res.send("hola mundo");
