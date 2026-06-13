@@ -8,7 +8,7 @@ import swaggerUi from 'swagger-ui-express';
 import userRoutes from './routes/user.js';
 import swaggerSpec from "./config/swagger.js";
 import { connectMongo } from "./db/mongo_conection.js";
-
+import userSchema from './models/User.js'
 
 const app = express();
 dotenv.config();
